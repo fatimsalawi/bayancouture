@@ -1,0 +1,171 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bayan Couture</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet"  href="{% static 'styles.css' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ 
+</head>
+<body>
+
+<style>
+
+    
+        /* Product card styles */
+        main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 1em;
+    }
+    
+    .product-item {
+        width: calc(33.33% - 20px); /* Adjust the width as needed, considering margins */
+        margin: 10px; /* Adjust the margin as needed */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .product-item:hover {
+        transform: scale(1.05);
+    }
+    
+    .product-item img {
+        width: 100%;
+        height: 600px; /* Set a fixed height for the images */
+        object-fit: cover; /* Ensure the image covers the entire container */
+        border-radius: 4px;
+    }
+    
+    .product-item-details {
+        padding: 1em;
+        text-align: center;
+        
+    }
+
+    h3{font-family: sans-serif;
+            font-size: 24px; font-style: bold;}
+
+    p{font-family: "Verdana", sans-serif;
+            font-size: 16px;}
+
+
+
+    .product-item .buy-now-button {
+                background-color: #333;
+                color: white;
+                border: none;
+                padding: 0.5em 1em;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                font-family: "Verdana", sans-serif;
+                font-size: 16px;
+            }
+    
+            .product-item .buy-now-button:hover {
+                background-color: #555;
+            }
+            .search-container {
+            margin-top: 6px;
+            margin-bottom: 6px;
+            text-align: center;
+        }
+        .search-input {
+            width: 300px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .search-button {
+            margin-left: 10px;
+            padding: 5px 15px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+      
+</style>
+<div class="jumbotron"> 
+  <div class="container text-center" >    
+    <img src="{% static 'couture\img\logo.png' %}" width="200" height="200">
+   
+  </div>
+</div>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li class="active"><a href="{% url 'product' %}">Products</a></li>
+        <li><a href="{% url 'about' %}">About Us </a></li>
+   
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{% url 'register' %}"><span class="glyphicon glyphicon-user"></span> {{ user.username }}</a></li>
+        
+        <li><a href="{% url 'view_cart' %}"><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<li><form action="{% url 'search' %}" method="GET">
+  <div class="search-container">
+  <input class="search-input" type="text" name="q" placeholder="Search products">
+  <button class="search-button" type="submit">Search</button>
+  <a class="search-button" href="{% url 'addabaya' %}">Add Abaya</a>
+</div>
+</form> </li>
+
+
+<main id="product">
+  <!-- Product Item 1 -->
+
+  {% for item in couture_objects %}
+  <div class="product-item">
+      <img src="{% static item.image %}"  alt="Product 1">
+      <div class="product-item-details">
+          <h3>{{item.title}}</h3>
+          <p>{{item.code}}</p>
+          <p>{{item.price}}</p>
+          
+          <a class="buy-now-button" href="{% url 'add_to_cart' item.id %}">Add to Cart</a>
+          <a class="buy-now-button" href="{% url 'product_detail' item.id %}">View Details</a>
+       
+      </div>
+  </div>
+
+  {% endfor %}
+</main>
+
+
+<br><br>
+
+<footer class="container-fluid text-center">
+ 
+    &copy; 2023 Bayan Couture
+
+
+</footer>
+
+</body>
+</html>
+
+
+

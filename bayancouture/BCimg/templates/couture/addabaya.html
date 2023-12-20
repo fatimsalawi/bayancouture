@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bayan Couture</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet"  href="{% static 'styles.css' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+ <style>
+  /* Footer styles */
+  footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1em;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+ </style>
+</head>
+<body>
+<div class="jumbotron"> 
+  <div class="container text-center" >    
+    <img src="{% static 'couture\img\logo.png' %}" width="200" height="200">
+  </div>
+</div>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li class="active"><a href="{% url 'product' %}">Products</a></li>
+        <li><a href="{% url 'about' %}">About Us </a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{% url 'register' %}"><span class="glyphicon glyphicon-user"></span> {{ user.username }}</a></li>
+        <li><a href="{% url 'view_cart' %}"><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</a></li>
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <h2>Add Abaya</h2>
+  <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Add</button>
+  </form>
+</div>
+
+
+<footer class="container-fluid text-center">
+  &copy; 2023 Bayan Couture
+</footer>
+</body>
+</html>

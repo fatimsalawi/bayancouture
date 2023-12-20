@@ -1,0 +1,136 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bayan Couture</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet"  href="{% static 'styles.css' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    header {
+      text-align: center;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 0 auto;
+      
+      text-align: center;
+      
+    }
+
+    h1 {
+      font-family: Georgia, serif;
+    }
+
+    h2 {
+      font-family: Georgia, serif;
+    }
+
+    p {
+      line-height: 1.6;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 20px;
+      
+    }
+
+    body {
+      position: fixed;
+      width: 100%;  
+    }
+    
+    body::after {
+      content: "";
+      background-image: url("{% static 'couture/img/back.jpg' %}");
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.5;
+      z-index: -1;
+    }
+    
+    /* Footer styles */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1em;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<div class="jumbotron"> 
+  <div class="container text-center">    
+    <img src="{% static 'couture/img/logo.png' %}" width="200" height="200">
+  </div>
+</div>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'product' %}">Products</a></li>
+        <li class="active"><a href="#">About Us</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{% url 'register' %}"><span class="glyphicon glyphicon-user"></span> {{ username }}</a></li>
+        <li><a href="{% url 'view_cart' %}"><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header>
+ 
+</header>
+<div id="paragraphcontent"></div>
+<section>
+  <h1>Welcome to BayanCouture</h1>
+  <h2>About Us</h2>
+  <p>
+    BayanCouture is a feminine line online boutique that offers you unique abaya's designs with a focus on the best fabrics for all seasons and occasions. 
+    Founded in 2018 by Bayan Alawi, BayanCouture has come a long way from its beginnings. 
+    We focus on giving the customer an elegant piece with a touch of uniqueness.
+    We now serve customers all over the world and are thrilled to be a part of every woman's closet.
+  </p>
+  <p>
+    Explore our collections and experience the artistry behind BayanCouture. Join us in celebrating individuality, elegance, and the beauty of self-expression through fashion.
+  </p>
+<br>
+  <h2>Contact Information</h2>
+  <p>For any inquiries, please feel free to reach out to us:</p>
+  
+  <p>Email: info@bayan-couture.com<p>
+    <p>Phone: 123-456-7890<p>
+  
+  
+</div>
+</section>
+
+<br><br>
+
+<footer class="container-fluid text-center">
+  &copy; 2023 Bayan Couture
+</footer>
+
+</body>
+</html>

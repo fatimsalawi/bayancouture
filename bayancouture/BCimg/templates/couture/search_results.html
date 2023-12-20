@@ -1,0 +1,115 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <style>
+        .product-item {
+            display: flex;
+            align-items: center;
+            margin: 50px auto;
+            max-width: 800px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .product-image {
+            max-width: 400px;
+            margin-right: 20px;
+        }
+        .product-details {
+            font-size: 18px;
+            flex-grow: 1;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .search-container {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .search-input {
+            width: 300px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .search-button {
+            margin-left: 10px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="jumbotron">
+        <div class="container text-center">
+            <img src="{% static 'couture/img/logo.png' %}" width="200" height="200">
+        </div>
+    </div>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li class="active"><a href="{% url 'product' %}">Products</a></li>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{% url 'register' %}"><span class="glyphicon glyphicon-user"></span> {{ user.username }}</a></li>
+                    <li><a href="{% url 'view_cart' %}"><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+        {% for product in products %}
+        <div class="product-item">
+            <img class="product-image" src="{% static product.image %}" alt="{{ product.title }}">
+            <div class="product-details">
+                <h3>{{ product.title }}</h3>
+                <p>{{ product.code }}</p>
+                <p>{{ product.price }}</p>
+                <p>{{ product.size }}</p>
+            </div>
+        </div>
+        {% empty %}
+        <p>To search for any Abaya type the code.</p>
+        {% endfor %}
+    </div>
+
+    <br>
+    <footer class="container-fluid text-center">
+        &copy; 2023 Bayan Couture
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
