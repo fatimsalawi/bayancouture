@@ -1,0 +1,131 @@
+[{
+  "_id": {
+    "$oid": "6563d27838251797c8f3f625"
+  },
+  "id": 1,
+  "title": "Abaya1",
+  "description": "This is the image of a white and black abaya",
+  "image": "couture\\img\\home4.jpg",
+  "code": "BA0011",
+  "price": "50 BD",
+  "size": "All sizes available"
+},
+{
+  "_id": {
+    "$oid": "6563d37138251797c8f3f626"
+  },
+  "id": 2,
+  "title": "Abaya2",
+  "description": "This is the image of a three piece abaya with white dress",
+  "image": "\\couture\\img\\abaya2.jpg",
+  "code": "BA0012",
+  "price": "45 BD",
+  "size": "All sizes available"
+},
+{
+  "_id": {
+    "$oid": "6563d3db38251797c8f3f627"
+  },
+  "id": 3,
+  "title": "Abaya3",
+  "description": "This is the image of a white abaya",
+  "image": "\\couture\\img\\abaya3.jpg",
+  "code": "BA0013",
+  "price": "35 BD",
+  "size": "All sizes available"
+},
+{
+  "_id": {
+    "$oid": "656c33dc7ea432caf6f3f786"
+  },
+  "id": 4,
+  "title": "Abaya4",
+  "description": "This is the image of a two piece abaya white gold design",
+  "image": "\\couture\\img\\abaya4.jpg",
+  "code": "BA0014",
+  "price": "37 BD",
+  "size": "All sizes available"
+},
+{
+  "_id": {
+    "$oid": "656c35e37ea432caf6f3f787"
+  },
+  "id": 5,
+  "title": "Abaya5",
+  "description": "This is the image of a two piece abaya with a beige dress",
+  "image": "\\couture\\img\\abaya5.jpg",
+  "code": "BA0015",
+  "price": "30 BD",
+  "size": "All sizes available"
+},
+{
+  "_id": {
+    "$oid": "656c37b87ea432caf6f3f788"
+  },
+  "id": 6,
+  "title": "Abaya6",
+  "description": "This is the image of a navy blue abaya",
+  "image": "\\couture\\img\\abaya6.jpg",
+  "code": "BA0016",
+  "price": "30 BD",
+  "size": "All sizes available"
+},
+{
+  "_id": {
+    "$oid": "656c387d7ea432caf6f3f789"
+  },
+  "id": 7,
+  "title": "Abaya7",
+  "description": "This is the image of a stripe abaya",
+  "image": "\\couture\\img\\abaya7.jpg",
+  "code": "BA0017",
+  "price": "50 BD",
+  "size": "All sizes available"
+},
+{
+  "_id": {
+    "$oid": "656c394d7ea432caf6f3f78a"
+  },
+  "id": 8,
+  "title": "Abaya8",
+  "description": "This is the image of a white abaya with black lines",
+  "image": "\\couture\\img\\abaya8.jpg",
+  "code": "BA0018",
+  "price": "40 BD",
+  "size": "All sizes available"
+},
+{
+  "_id": {
+    "$oid": "656c41a442238013d82fbcca"
+  },
+  "id": 9,
+  "title": "Abaya9",
+  "description": "This is the image of a light yellow abaya",
+  "image": "\\couture\\img\\abaya9.jpg",
+  "code": "BA0019",
+  "price": "35 BD",
+  "size": "All sizes available"
+},
+{
+  "_id": {
+    "$oid": "6580240a9e75162d487a564f"
+  },
+  "id": 12,
+  "title": "Abaya10",
+  "description": "This is the image of a pink abaya",
+  "image": "\\couture\\img\\abaya10.jpg",
+  "code": "BA0010",
+  "price": "30 BD",
+  "size": "All sizes avaiable"
+},
+{
+  "_id": {
+    "$oid": "6581c57f26ddf7f44d40c7f3"
+  },
+  "id": 11,
+  "title": "Abaya11",
+  "description": "This is the image of a light green abaya",
+  "image": "\\couture\\img\\abaya11.jpg",
+  "code": "BA0020",
+  "price": "55 BD"
+}]

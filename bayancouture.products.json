@@ -1,0 +1,64 @@
+[{
+  "_id": {
+    "$oid": "6569f9d32f39290b97d1524f"
+  },
+  "name": "BA0011",
+  "price": 40,
+  "size": "All sizes available"
+},
+{
+  "_id": {
+    "$oid": "6569f9d32f39290b97d15250"
+  },
+  "name": "BA0012",
+  "price": 45,
+  "size": "All sizes available"
+},
+{
+  "_id": {
+    "$oid": "6569fa1c2f39290b97d15251"
+  },
+  "name": "BA0013",
+  "price": 35,
+  "size": "All sizes available"
+},
+{
+  "_id": {
+    "$oid": "6569fa1c2f39290b97d15252"
+  },
+  "name": "BA0014",
+  "price": 37,
+  "size": "All sizes available"
+},
+{
+  "_id": {
+    "$oid": "6569fa6b2f39290b97d15253"
+  },
+  "name": "BA0015",
+  "price": 30,
+  "size": "All sizes available"
+},
+{
+  "_id": {
+    "$oid": "6569fa6b2f39290b97d15254"
+  },
+  "name": "BA0016",
+  "price": 30,
+  "size": "All sizes available"
+},
+{
+  "_id": {
+    "$oid": "6569fa6b2f39290b97d15255"
+  },
+  "name": "BA0017",
+  "price": 50,
+  "size": "All sizes available"
+},
+{
+  "_id": {
+    "$oid": "6569fa6b2f39290b97d15256"
+  },
+  "name": "BA0018",
+  "price": 40,
+  "size": "All sizes available"
+}]
